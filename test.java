@@ -4,3 +4,6 @@ import dikaz;
 // puttó
 // ilegal autóverseny 
 // tippmixx
+
+
+// retardgit123
