@@ -3,7 +3,7 @@ import java.util.Random;
 public class Car {
 
     
-    private double position;
+    private int position;
     private double horsePower;
     private double zeroToHundred;
     private double weight;
@@ -17,11 +17,11 @@ public class Car {
 
     public Car(double position, double horsePower, double zeroToHundred, double weight, double luck) {
         Random r = new Random();
-        this.position = 1 + (11 - 1) * r.nextDouble();
-        this.horsePower = 1 + (11 - 1) * r.nextDouble();
-        this.zeroToHundred = 1 + (11 - 1) * r.nextDouble();
-        this.weight = 1 + (11 - 1) * r.nextDouble();
-        this.luck = 1 + (11 - 1) * r.nextDouble();
+        this.position = 1 + (10 - 0) * r.nextInt();
+        this.horsePower = 1 + (10 - 0) * r.nextDouble();
+        this.zeroToHundred = 1 + (10 - 0) * r.nextDouble();
+        this.weight = 1 + (10 - 0) * r.nextDouble();
+        this.luck = 1 + (10 - 0) * r.nextDouble();
     }
 
     public double getPosition() {
@@ -32,7 +32,7 @@ public class Car {
         return horsePower;
     }
 
-    public double getZeroToHundred() {
+    public double getZeroToHundred() {
         return zeroToHundred;
     }
 
@@ -40,7 +40,7 @@ public class Car {
         return weight;
     }
 
-    public double getLuck() {
+    public double getLuck() {
         return luck;
     }
 }
