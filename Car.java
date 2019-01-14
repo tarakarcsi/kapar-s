@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Car {
 
     
@@ -6,6 +8,21 @@ public class Car {
     private double zeroToHundred;
     private double weight;
     private double luck;
+
+    // public double generateLuck(double n) {
+    //     Random rand = new Random();
+    //     n = rand.nextInt(10) + 1;
+    //     return n;
+    // }
+
+    public Car(double position, double horsePower, double zeroToHundred, double weight, double luck) {
+        Random r = new Random();
+        this.position = 1 + (11 - 1) * r.nextDouble();
+        this.horsePower = 1 + (11 - 1) * r.nextDouble();
+        this.zeroToHundred = 1 + (11 - 1) * r.nextDouble();
+        this.weight = 1 + (11 - 1) * r.nextDouble();
+        this.luck = 1 + (11 - 1) * r.nextDouble();
+    }
 
     public double getPosition() {
         return position;
