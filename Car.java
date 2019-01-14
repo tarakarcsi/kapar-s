@@ -9,12 +9,7 @@ public class Car {
     private double weight;
     private double luck;
 
-    // public double generateLuck(double n) {
-    //     Random rand = new Random();
-    //     n = rand.nextInt(10) + 1;
-    //     return n;
-    // }
-
+    
     public Car(double position, double horsePower, double zeroToHundred, double weight, double luck) {
         String[] brandList = {"Aszton Martin", "Béjemvé", "Dodzs", "Kilya", "Mázerátti", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Bentli"};
         Random r = new Random();
