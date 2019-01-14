@@ -1,0 +1,7 @@
+/**
+ * HistoricalDatas
+ */
+public class HistoricalDatas {
+
+    
+}
