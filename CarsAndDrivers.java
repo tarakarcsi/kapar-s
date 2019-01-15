@@ -28,12 +28,68 @@ public class CarsAndDrivers extends Main {
         String[] brandList = {"Aszton Martin", "Béjemvé", "Dodzs", "Kilya", "Mázerátti", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Bentli"};
         brand = brandList[r.nextInt(brandList.length)];
         this.position = ThreadLocalRandom.current().nextInt(1, 10 + 1);
-        this.horsePower = (10 - 0) * r.nextDouble();
-        this.zeroToHundred = (10 - 0) * r.nextDouble();
-        this.weight = (10 - 0) * r.nextDouble();
+        switch (brand) {
+            case "Aszton Martin":
+                this.horsePower = 4;
+                this.weight = 4;
+                this.zeroToHundred = 3;
+                break;
+            case "Béjemvé":
+                this.horsePower = 8;
+                this.weight = 2;
+                this.zeroToHundred = 8;
+                break;
+
+            case "Dodzs":
+                this.horsePower = 7;
+                this.weight = 8;
+                this.zeroToHundred = 6;
+                break;
+
+            case "Kilya":
+                this.horsePower = 10;
+                this.weight = 1;
+                this.zeroToHundred = 10;
+                break;
+
+            case "Mázerátti":
+                this.horsePower = 5;
+                this.weight = 5;
+                this.zeroToHundred = 2;
+                break;
+
+            case "Dzsipp":
+                this.horsePower = 6;
+                this.weight = 10;
+                this.zeroToHundred = 7;
+                break;
+
+            case "Kőnigszeg":
+                this.horsePower = 1;
+                this.weight = 6;
+                this.zeroToHundred = 1;
+                break;
+
+            case "Micubicsi":
+                this.horsePower = 9;
+                this.weight = 3;
+                this.zeroToHundred = 9;
+                break;
+
+            case "Krájzler":
+                this.horsePower = 3;
+                this.weight = 9;
+                this.zeroToHundred = 4;
+                break;
+
+            case "Bentli":
+                this.horsePower = 2;
+                this.weight = 7;
+                this.zeroToHundred = 5;
+                break;
+        }
         this.luckCar = (10 - 0) * r.nextDouble();
         this.brand = brand;
-        this.luckCar = luckCar;
         this.name = name;
         this.skill = skill;
         this.luckDriver = luckDriver;
@@ -77,9 +133,10 @@ public class CarsAndDrivers extends Main {
 
     @Override
     public String toString() {
+        double newVariable = Math.abs(skill - 10);
         return "\n" + "Driver's name: " + name + "\n" + "The car's name: " + brand + "\n" + 
-        "The starting position: " + position + "\n" + "The car's horsepower: " + horsePower * 25 + "\n" + 
-        "Zero to hundred speed: " + zeroToHundred / 2 + " seconds" + "\n" + "The car's weight " + weight * 175 + "\n" + 
-        "The driver's skill: " + skill + " / 10" + "\n";
+        "The starting position: " + position + "\n" + "The car's horsepower: " + horsePower + "\n" + 
+        "Zero to hundred speed: " + zeroToHundred + " seconds" + "\n" + "The car's weight " + weight + "\n" + 
+        "The driver's skill: " + newVariable + " / 10" + "\n" + skill;
     }
 }
