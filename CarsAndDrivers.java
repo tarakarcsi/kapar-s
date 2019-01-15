@@ -2,6 +2,7 @@
  * CarsAndDrivers
  */
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class CarsAndDrivers extends Main {
 
@@ -26,7 +27,7 @@ public class CarsAndDrivers extends Main {
         luckDriver = (10 - 0) * r.nextDouble();
         String[] brandList = {"Aszton Martin", "Béjemvé", "Dodzs", "Kilya", "Mázerátti", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Bentli"};
         brand = brandList[r.nextInt(brandList.length)];
-        this.position = 1 + (10 - 0) * r.nextInt();
+        this.position = ThreadLocalRandom.current().nextInt(1, 10 + 1);
         this.horsePower = (10 - 0) * r.nextDouble();
         this.zeroToHundred = (10 - 0) * r.nextDouble();
         this.weight = (10 - 0) * r.nextDouble();
@@ -76,7 +77,9 @@ public class CarsAndDrivers extends Main {
 
     @Override
     public String toString() {
-        return "\n" + name + "\n" + brand + "\n" + position + "\n" + horsePower + "\n" + zeroToHundred + "\n" + 
-        weight + "\n" + skill + "\n";
+        return "\n" + "Driver's name: " + name + "\n" + "The car's name: " + brand + "\n" + 
+        "The starting position: " + position + "\n" + "The car's horsepower: " + horsePower * 25 + "\n" + 
+        "Zero to hundred speed: " + zeroToHundred / 2 + " seconds" + "\n" + "The car's weight " + weight * 175 + "\n" + 
+        "The driver's skill: " + skill + " / 10" + "\n";
     }
 }
