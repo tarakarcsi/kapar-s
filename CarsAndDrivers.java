@@ -22,15 +22,15 @@ public class CarsAndDrivers extends Main {
             "Fernándó Álonzó", "Rúbensz Bárikelló", "Szebásztián Lőb", "Máksz Fersztáppen", "Kolin Mekrí"};
         Random r = new Random();
         name = nameList[r.nextInt(nameList.length)];
-        skill = 1 + (10 - 0) * r.nextDouble();
-        luckDriver = 1 + (10 - 0) * r.nextDouble();
+        skill = (10 - 0) * r.nextDouble();
+        luckDriver = (10 - 0) * r.nextDouble();
         String[] brandList = {"Aszton Martin", "Béjemvé", "Dodzs", "Kilya", "Mázerátti", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Bentli"};
         brand = brandList[r.nextInt(brandList.length)];
         this.position = 1 + (10 - 0) * r.nextInt();
-        this.horsePower = 1 + (10 - 0) * r.nextDouble();
-        this.zeroToHundred = 1 + (10 - 0) * r.nextDouble();
-        this.weight = 1 + (10 - 0) * r.nextDouble();
-        this.luckCar = 1 + (10 - 0) * r.nextDouble();
+        this.horsePower = (10 - 0) * r.nextDouble();
+        this.zeroToHundred = (10 - 0) * r.nextDouble();
+        this.weight = (10 - 0) * r.nextDouble();
+        this.luckCar = (10 - 0) * r.nextDouble();
         this.brand = brand;
         this.luckCar = luckCar;
         this.name = name;
@@ -76,6 +76,7 @@ public class CarsAndDrivers extends Main {
 
     @Override
     public String toString() {
-        return name + " " + brand;
+        return "\n" + name + "\n" + brand + "\n" + position + "\n" + horsePower + "\n" + zeroToHundred + "\n" + 
+        weight + "\n" + skill + "\n";
     }
 }
