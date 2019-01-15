@@ -1,6 +1,8 @@
 /**
  * CarsAndDrivers
  */
+import java.util.Random;
+
 public class CarsAndDrivers extends Main {
 
     private String brand;
@@ -8,41 +10,33 @@ public class CarsAndDrivers extends Main {
     private double horsePower;
     private double zeroToHundred;
     private double weight;
-    private double luck2;
+    private double luckCar;
     private String name;
     private double skill;
-    private double luck1;
+    private double luckDriver;
 
 
-    Driver driver = new Driver(skill, luck1, name);
-    Car car = new Car(position, horsePower, zeroToHundred, weight, luck2);
 
-    public CarsAndDrivers(double skill, double luck1, String name) {
-        this.skill = skill;
-        this.luck1 = luck1;
+    public CarsAndDrivers(String name, double skill, double luckDriver, int position, double horsePower, double zeroToHundred, double weight,String brand, double luckCar) {
+        String[] nameList = {"Májkül Sumaher", "Lújisz Hemilton", "Szebásztián Fettel", "Kimi Rájkőnen", "Dzsenzon Bátön", 
+            "Fernándó Álonzó", "Rúbensz Bárikelló", "Szebásztián Lőb", "Máksz Fersztáppen", "Kolin Mekrí"};
+        Random r = new Random();
+        name = nameList[r.nextInt(nameList.length)];
+        skill = 1 + (10 - 0) * r.nextDouble();
+        luckDriver = 1 + (10 - 0) * r.nextDouble();
+        String[] brandList = {"Aszton Martin", "Béjemvé", "Dodzs", "Kilya", "Mázerátti", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Bentli"};
+        brand = brandList[r.nextInt(brandList.length)];
+        this.position = 1 + (10 - 0) * r.nextInt();
+        this.horsePower = 1 + (10 - 0) * r.nextDouble();
+        this.zeroToHundred = 1 + (10 - 0) * r.nextDouble();
+        this.weight = 1 + (10 - 0) * r.nextDouble();
+        this.luckCar = 1 + (10 - 0) * r.nextDouble();
+        this.brand = brand;
+        this.luckCar = luckCar;
         this.name = name;
+        this.skill = skill;
+        this.luckDriver = luckDriver;
     }
-
-    public CarsAndDrivers(int position, double horsePower, double zeroToHundred, double weight, double luck2) {
-        this.position = position;
-        this.horsePower = horsePower;
-        this.zeroToHundred = zeroToHundred;
-        this.weight = weight;
-        this.luck2 = luck2;
-    }
-
-
-    // public CarsAndDrivers(String name, double skill, double luck1, int position, double horsePower, double zeroToHundred, double weight, double luck2) {
-    //     this.brand = brand;
-    //     this.position = position;
-    //     this.horsePower = horsePower;
-    //     this.zeroToHundred = zeroToHundred;
-    //     this.weight = weight;
-    //     this.luck2 = luck2;
-    //     this.name = name;
-    //     this.skill = skill;
-    //     this.luck1 = luck1;
-    // }
     
     public String getBrand() {
         return brand;
@@ -64,8 +58,8 @@ public class CarsAndDrivers extends Main {
         return weight;
     }
 
-    public double getLuck2() {
-        return luck2;
+    public double getluckCar() {
+        return luckCar;
     }
 
     public String getName() {
@@ -76,7 +70,12 @@ public class CarsAndDrivers extends Main {
         return skill;
     }
 
-    public double getLuck1() {
-        return luck1;
+    public double getluckDriver() {
+        return luckDriver;
+    }
+
+    @Override
+    public String toString() {
+        return name + " " + brand;
     }
 }
