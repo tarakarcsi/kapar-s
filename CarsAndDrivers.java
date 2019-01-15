@@ -3,6 +3,8 @@
  */
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.Arrays;
+import java.util.List;
 
 public class CarsAndDrivers extends Main {
 
@@ -27,6 +29,7 @@ public class CarsAndDrivers extends Main {
         luckDriver = (10 - 0) * r.nextDouble();
         String[] brandList = {"Aszton Martin", "Béjemvé", "Dodzs", "Kilya", "Mázerátti", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Bentli"};
         brand = brandList[r.nextInt(brandList.length)];
+        Strint[] used = Arrays.asList(brandList);
         this.position = ThreadLocalRandom.current().nextInt(1, 10 + 1);
         switch (brand) {
             case "Aszton Martin":
@@ -136,7 +139,7 @@ public class CarsAndDrivers extends Main {
         double newVariable = Math.abs(skill - 10);
         return "\n" + "Driver's name: " + name + "\n" + "The car's name: " + brand + "\n" + 
         "The starting position: " + position + "\n" + "The car's horsepower: " + horsePower + "\n" + 
-        "Zero to hundred speed: " + zeroToHundred + " seconds" + "\n" + "The car's weight " + weight + "\n" + 
+        "Zero to hundred speed: " + zeroToHundred + "\n" + "The car's weight " + weight + "\n" + 
         "The driver's skill: " + newVariable + " / 10" + "\n" + skill;
     }
 }
