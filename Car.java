@@ -1,16 +1,16 @@
 import java.util.Random;
 
-public class Car {
+public class Car extends CarsAndDrivers {
 
-    private String brand;
-    private int position;
-    private double horsePower;
-    private double zeroToHundred;
-    private double weight;
-    private double luck;
+    // private String brand;
+    // private int position;
+    // private double horsePower;
+    // private double zeroToHundred;
+    // private double weight;
+    // private double luck2;
 
     
-    public Car(double position, double horsePower, double zeroToHundred, double weight, double luck) {
+    public Car(double position, double horsePower, double zeroToHundred, double weight, double luck2) {
         String[] brandList = {"Aszton Martin", "Béjemvé", "Dodzs", "Kilya", "Mázerátti", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Bentli"};
         Random r = new Random();
         brand = brandList[r.nextInt(brandList.length)];
@@ -18,7 +18,7 @@ public class Car {
         this.horsePower = 1 + (10 - 0) * r.nextDouble();
         this.zeroToHundred = 1 + (10 - 0) * r.nextDouble();
         this.weight = 1 + (10 - 0) * r.nextDouble();
-        this.luck = 1 + (10 - 0) * r.nextDouble();
+        this.luck2 = 1 + (10 - 0) * r.nextDouble();
     }
 
     public String getBrand() {
@@ -41,7 +41,7 @@ public class Car {
         return weight;
     }
 
-    public double getLuck() {
-        return luck;
+    public double getLuck2() {
+        return luck2;
     }
 }
