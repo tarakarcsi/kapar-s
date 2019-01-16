@@ -22,18 +22,7 @@ public class HistoricalDatas extends Main{
     private double luckDriver;
 
     public List<CarsAndDrivers> createRacer() {
-
-        String[] nameList = {"Májkül Sumaher", "Lújisz Hemilton", "Szebásztián Fettel", "Kimi Rájkőnen", "Dzsenzon Bátön", 
-            "Fernándó Álonzó", "Rúbensz Bárikelló", "Szebásztián Lőb", "Máksz Fersztáppen", "Kolin Mekrí"};
-        Random r = new Random();
-        skill = (10 - 0) * r.nextDouble();
-        luckDriver = (10 - 0) * r.nextDouble();
-        String[] brandList = {"Lekszusz", "Béjemvé", "Dodzs", "Kilya", "Pözsó", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Rojsz Rojsz"};
-        this.position = ThreadLocalRandom.current().nextInt(1, 10 + 1);
-        List <Integer> positions = new ArrayList<>();
-        List <String> names = new ArrayList<>();
-        brand = brandList[r.nextInt(brandList.length)];
-        name = nameList[r.nextInt(nameList.length)];
+        
         CarsAndDrivers racer1 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
         CarsAndDrivers racer2 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
         CarsAndDrivers racer3 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
@@ -47,17 +36,18 @@ public class HistoricalDatas extends Main{
 
 
         List <CarsAndDrivers> liszt = new ArrayList<>();
-        liszt.add(racer1);
-        liszt.add(racer2);
-        liszt.add(racer3);
-        liszt.add(racer4);
-        liszt.add(racer5);
-        liszt.add(racer6);
-        liszt.add(racer7);
-        liszt.add(racer8);
-        liszt.add(racer9);
-        liszt.add(racer10);
-
+        for (int i = 0; i < 10 / 10; i++) {
+            liszt.add(racer1);
+            liszt.add(racer2);
+            liszt.add(racer3);
+            liszt.add(racer4);
+            liszt.add(racer5);
+            liszt.add(racer6);
+            liszt.add(racer7);
+            liszt.add(racer8);
+            liszt.add(racer9);
+            liszt.add(racer10);    
+        }
         return liszt;
     }
     
