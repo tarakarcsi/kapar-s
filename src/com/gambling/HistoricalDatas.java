@@ -30,16 +30,16 @@ public class HistoricalDatas extends Main{
 
     public List<CarsAndDrivers> createRacer() {
         
-        CarsAndDrivers racer1 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer2 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer3 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer4 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer5 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer6 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer7 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer8 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer9 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer10 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer1 = new CarsAndDrivers("Májkül Sumaher", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer2 = new CarsAndDrivers("Lújisz Hemilton", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer3 = new CarsAndDrivers("Szebásztián Fettel", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer4 = new CarsAndDrivers("Kimi Rájkőnen", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer5 = new CarsAndDrivers("Dzsenzon Bátön", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer6 = new CarsAndDrivers("Fernándó Álonzó", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer7 = new CarsAndDrivers("Rúbensz Bárikelló", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer8 = new CarsAndDrivers("Máksz Fersztáppen", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer9 = new CarsAndDrivers("Szebásztián Lőb", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer10 = new CarsAndDrivers("Kolin Mekrí", -1, -1, -1, -1, -1, "default", -1);
 
         List <CarsAndDrivers> liszt = new ArrayList<>();
             liszt.add(racer1);
