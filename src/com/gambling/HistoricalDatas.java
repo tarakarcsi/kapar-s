@@ -22,6 +22,7 @@ public class HistoricalDatas extends Main{
     private double luckDriver;
 
     public List<CarsAndDrivers> createRacer() {
+
         String[] nameList = {"Májkül Sumaher", "Lújisz Hemilton", "Szebásztián Fettel", "Kimi Rájkőnen", "Dzsenzon Bátön", 
             "Fernándó Álonzó", "Rúbensz Bárikelló", "Szebásztián Lőb", "Máksz Fersztáppen", "Kolin Mekrí"};
         Random r = new Random();
@@ -33,28 +34,29 @@ public class HistoricalDatas extends Main{
         List <String> names = new ArrayList<>();
         brand = brandList[r.nextInt(brandList.length)];
         name = nameList[r.nextInt(nameList.length)];
-        CarsAndDrivers racer1 = new CarsAndDrivers("asd", 12.0, 12.0, 1, 2, 2, 2, "Lekszusz", 2);
-        // CarsAndDrivers racer2 = new CarsAndDrivers(name, skill, luckDriver, position, horsePower, zeroToHundred, weight, brand, luckCar);
-        // CarsAndDrivers racer3 = new CarsAndDrivers(name, skill, luckDriver, position, horsePower, zeroToHundred, weight, brand, luckCar);
-        // CarsAndDrivers racer4 = new CarsAndDrivers(name, skill, luckDriver, position, horsePower, zeroToHundred, weight, brand, luckCar);
-        // CarsAndDrivers racer5 = new CarsAndDrivers(name, skill, luckDriver, position, horsePower, zeroToHundred, weight, brand, luckCar);
-        // CarsAndDrivers racer6 = new CarsAndDrivers(name, skill, luckDriver, position, horsePower, zeroToHundred, weight, brand, luckCar);
-        // CarsAndDrivers racer7 = new CarsAndDrivers(name, skill, luckDriver, position, horsePower, zeroToHundred, weight, brand, luckCar);
-        // CarsAndDrivers racer8 = new CarsAndDrivers(name, skill, luckDriver, position, horsePower, zeroToHundred, weight, brand, luckCar);
-        // CarsAndDrivers racer9 = new CarsAndDrivers(name, skill, luckDriver, position, horsePower, zeroToHundred, weight, brand, luckCar);
-        // CarsAndDrivers racer10 = new CarsAndDrivers(name, skill, luckDriver, position, horsePower, zeroToHundred, weight, brand, luckCar);
+        CarsAndDrivers racer1 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer2 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer3 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer4 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer5 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer6 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer7 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer8 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer9 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer10 = new CarsAndDrivers("default", -1, -1, -1, -1, -1, -1, "default", -1);
+
 
         List <CarsAndDrivers> liszt = new ArrayList<>();
         liszt.add(racer1);
-        // liszt.add(racer2);
-        // liszt.add(racer3);
-        // liszt.add(racer4);
-        // liszt.add(racer5);
-        // liszt.add(racer6);
-        // liszt.add(racer7);
-        // liszt.add(racer8);
-        // liszt.add(racer9);
-        // liszt.add(racer10);
+        liszt.add(racer2);
+        liszt.add(racer3);
+        liszt.add(racer4);
+        liszt.add(racer5);
+        liszt.add(racer6);
+        liszt.add(racer7);
+        liszt.add(racer8);
+        liszt.add(racer9);
+        liszt.add(racer10);
 
         return liszt;
     }
