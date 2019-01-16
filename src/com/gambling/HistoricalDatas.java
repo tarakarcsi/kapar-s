@@ -47,14 +47,16 @@ public class HistoricalDatas extends Main{
 
         double maxscore = 10000;
         double score;
+        String winnerteam = null;
         for (int i = 0; i < racers.size(); i++) {
             score = racers.get(i).getSkill() + racers.get(i).getHorsePower() + racers.get(i).getluckCar() + racers.get(i).getluckDriver() + racers.get(i).getZeroToHundred() + racers.get(i).getWeight();
             if(score < maxscore){
                 maxscore = score;
-                System.out.println(maxscore + " " + racers.get(i).getName() + racers.get(i).getBrand());
+                winnerteam = racers.get(i).getName() + " " + racers.get(i).getBrand();
             }
 
         }
+        System.out.println(winnerteam);
         
         
         
