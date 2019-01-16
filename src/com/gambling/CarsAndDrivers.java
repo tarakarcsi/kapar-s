@@ -18,8 +18,6 @@ public class CarsAndDrivers extends Main {
     private double skill;
     private double luckDriver;
 
-
-
     public CarsAndDrivers(String name, double skill, double luckDriver, int position, double horsePower, double zeroToHundred, double weight,String brand, double luckCar) {
         String[] nameList = {"Májkül Sumaher", "Lújisz Hemilton", "Szebásztián Fettel", "Kimi Rájkőnen", "Dzsenzon Bátön", 
             "Fernándó Álonzó", "Rúbensz Bárikelló", "Szebásztián Lőb", "Máksz Fersztáppen", "Kolin Mekrí"};
@@ -90,6 +88,7 @@ public class CarsAndDrivers extends Main {
                 this.zeroToHundred = 5;
                 break;
         }
+        
         this.luckCar = (10 - 0) * r.nextDouble();
         this.brand = brand;
         this.name = name;
