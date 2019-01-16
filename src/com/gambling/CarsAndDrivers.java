@@ -131,10 +131,13 @@ public class CarsAndDrivers extends Main {
 
     @Override
     public String toString() {
-        double newVariable = Math.abs(skill - 10);
+        double newVariable1 = Math.abs(skill - 10);
+        double newVariable2 = Math.abs(luckDriver - 10);
+        double newVariable3 = Math.abs(luckCar - 10);
         return "\n" + "Driver's name: " + name + "\n" + "The car's name: " + brand + "\n" + 
         "\n" + "The car's horsepower: " + horsePower + "\n" + 
         "Zero to hundred speed: " + zeroToHundred + "\n" + "The car's weight " + weight + "\n" + 
-        "The driver's skill: " + newVariable + " / 10" + "\n";
+        "The driver's skill: " + newVariable1 + " / 10" + "\n" + "Driver's luck: " + newVariable2 + " / 10" + "\n" + 
+        "Car's luck: " + newVariable3 + " / 10" + "\n";
     }
 }
