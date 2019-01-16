@@ -44,6 +44,18 @@ public class HistoricalDatas extends Main{
         racers.add(racer8);
         racers.add(racer9);
         racers.add(racer10);
+
+        double maxscore = 10000;
+        double score;
+        for (int i = 0; i < racers.size(); i++) {
+            score = racers.get(i).getSkill() + racers.get(i).getHorsePower() + racers.get(i).getluckCar() + racers.get(i).getluckDriver() + racers.get(i).getZeroToHundred() + racers.get(i).getWeight();
+            if(score < maxscore){
+                maxscore = score;
+                System.out.println(maxscore + " " + racers.get(i).getName() + racers.get(i).getBrand());
+            }
+
+        }
+        
         
         
         // FileWriter fileWriter = new FileWriter("Data.csv");
@@ -64,33 +76,4 @@ public class HistoricalDatas extends Main{
             
             return racers;
         }
-        public CarsAndDrivers winner(List <CarsAndDrivers> racers){
-            double score1;
-            double score2;
-            double score3;
-            double score4;
-            double score5;
-            double score6;
-            double score7;
-            double score8;
-            double score9;
-            double score10;
-
-            double[] scores = new double[10];
-
-        
-            score1 = racer1.getHorsePower() + racer1.getWeight() + racer1.getZeroToHundred() + racer1.getluckCar() + racer1.getluckDriver() + racer1.getSkill();
-            score2 = racer2.getHorsePower() + racer2.getWeight() + racer2.getZeroToHundred() + racer2.getluckCar() + racer2.getluckDriver() + racer2.getSkill();
-            score3 = racer3.getHorsePower() + racer3.getWeight() + racer3.getZeroToHundred() + racer3.getluckCar() + racer3.getluckDriver() + racer3.getSkill();
-            score4 = racer4.getHorsePower() + racer4.getWeight() + racer4.getZeroToHundred() + racer4.getluckCar() + racer4.getluckDriver() + racer4.getSkill();
-            score5 = racer5.getHorsePower() + racer5.getWeight() + racer5.getZeroToHundred() + racer5.getluckCar() + racer5.getluckDriver() + racer5.getSkill();
-            score6 = racer6.getHorsePower() + racer6.getWeight() + racer6.getZeroToHundred() + racer6.getluckCar() + racer6.getluckDriver() + racer6.getSkill();
-            score7 = racer7.getHorsePower() + racer7.getWeight() + racer7.getZeroToHundred() + racer7.getluckCar() + racer7.getluckDriver() + racer7.getSkill();
-            score8 = racer8.getHorsePower() + racer8.getWeight() + racer8.getZeroToHundred() + racer8.getluckCar() + racer8.getluckDriver() + racer8.getSkill();
-            score9 = racer9.getHorsePower() + racer9.getWeight() + racer9.getZeroToHundred() + racer9.getluckCar() + racer9.getluckDriver() + racer9.getSkill();
-            score10 = racer10.getHorsePower() + racer10.getWeight() + racer10.getZeroToHundred() + racer10.getluckCar() + racer10.getluckDriver() + racer10.getSkill();
-            
-            
-        }
-        
     }

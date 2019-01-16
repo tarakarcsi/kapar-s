@@ -14,7 +14,8 @@ public class Main {
         CarsAndDrivers carAndDriver = new CarsAndDrivers("default", -1, -1, -1, -1,-1,"default", -1);
         HistoricalDatas asd = new HistoricalDatas();
         List<CarsAndDrivers> result = asd.createRacer();
-        System.out.println(result);
+        System.out.println(result.get(1).getBrand());
+        
     }
 
     
