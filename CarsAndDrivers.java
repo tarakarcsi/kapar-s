@@ -3,8 +3,8 @@
  */
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.Arrays;
-import java.util.List;
+// import java.util.Arrays;
+// import java.util.List;
 
 public class CarsAndDrivers extends Main {
 
@@ -27,12 +27,12 @@ public class CarsAndDrivers extends Main {
         name = nameList[r.nextInt(nameList.length)];
         skill = (10 - 0) * r.nextDouble();
         luckDriver = (10 - 0) * r.nextDouble();
-        String[] brandList = {"Aszton Martin", "Béjemvé", "Dodzs", "Kilya", "Mázerátti", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Bentli"};
+        String[] brandList = {"Lekszusz", "Béjemvé", "Dodzs", "Kilya", "Pözsó", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Rojsz Rojsz"};
         brand = brandList[r.nextInt(brandList.length)];
-        Strint[] used = Arrays.asList(brandList);
+        // String[] used = Arrays.asList(brandList);
         this.position = ThreadLocalRandom.current().nextInt(1, 10 + 1);
         switch (brand) {
-            case "Aszton Martin":
+            case "Lekszusz":
                 this.horsePower = 4;
                 this.weight = 4;
                 this.zeroToHundred = 3;
@@ -55,7 +55,7 @@ public class CarsAndDrivers extends Main {
                 this.zeroToHundred = 10;
                 break;
 
-            case "Mázerátti":
+            case "Pözsó":
                 this.horsePower = 5;
                 this.weight = 5;
                 this.zeroToHundred = 2;
@@ -85,7 +85,7 @@ public class CarsAndDrivers extends Main {
                 this.zeroToHundred = 4;
                 break;
 
-            case "Bentli":
+            case "Rojsz Rojsz":
                 this.horsePower = 2;
                 this.weight = 7;
                 this.zeroToHundred = 5;
