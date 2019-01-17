@@ -3,30 +3,36 @@ import java.io.FileReader;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.io.*;
 
 public class DataEvaluator {
+    
    public String[][] ReadingFromFile() {
-    try {
-      Scanner sc = new Scanner(new BufferedReader(new FileReader("Data.csv")));
-      int rows = 4;
-      int columns = 4;
-      String [][] myArray = new String[rows][columns];
-      while(sc.hasNextLine()) {
-         for (int i=0; i<myArray.length; i++) {
-            String[] line = sc.nextLine().trim().split(" ");
-            for (int j=0; j<line.length; j++) {
-               myArray[i][j] = line[j];
+        File dataFile = new File("Data.csv");
+        Scanner sc2 = null;
+        try{
+            sc2 = new Scanner(dataFile);
+            } catch(FileNotFoundException e) {
+                System.out.println("Vérmalac" + e.getMessage());
             }
-         }
-      }
-      System.out.println(Arrays.deepToString(myArray));
-        return myArray;
-    } catch (Exception e) {
-        System.out.println("error");
-        return null;
-    } finally {
-        System.out.println("error");
-        return null;
+        int z = 0;
+        while(sc2.hasNextLine()) {
+            z++;
+            sc2.nextLine();
+        }
+        sc2.close();
+        Scanner scr2 = null;
+        try {
+            scr2 = new Scanner(dataFile);
+        } catch(FileNotFoundException e) {
+            System.out.println("Vérmalac " + e.getMessage());
+        }
+        String[][] raceData = new String[z][8];
+        for(int y=0;y<z;y++){
+            String line = scr2.nextLine();
+            raceData[y] = line.split(",");
+        }
+        return raceData; 
+        
     }
-   }
 }

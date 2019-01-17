@@ -20,11 +20,13 @@ public class CarsAndDrivers extends Main {
     private double zeroToHundred2;
     private double weight2;
 
-    public CarsAndDrivers(String name, double skill, double luckDriver, double horsePower, double zeroToHundred, double weight,String brand, double luckCar) {
+    public CarsAndDrivers(String name, double skill, double luckDriver, double horsePower, double zeroToHundred, double weight, double luckCar) {
         
         Random r = new Random();
         String[] brandList = {"Lekszusz", "Béjemvé", "Dodzs", "Kilya", "Pözsó", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Rojsz Rojsz"};
-
+        int carIndex = r.nextInt(brandList.length-1);
+        
+        String brand = brandList[carIndex];
         
         switch (brand) {
             case "Lekszusz":

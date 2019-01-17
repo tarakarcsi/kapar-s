@@ -24,14 +24,12 @@ public class Main {
         return result;
     }
     public static void main(String[] args) {
-        CarsAndDrivers carAndDriver = new CarsAndDrivers("default", -1, -1, -1, -1,-1,"default", -1);
+        CarsAndDrivers carAndDriver = new CarsAndDrivers("default", -1, -1, -1, -1,-1, -1);
         HistoricalDatas historicalDatas = new HistoricalDatas();
         historicalDatas.generateHistoricalDatas(1000);
         DataEvaluator dataEvaluator = new DataEvaluator();
-        for (int i = 0; i < 100; i++) {
-            
-        }
-
+        String[][] a = dataEvaluator.ReadingFromFile();
+        System.out.println(Arrays.deepToString(a));
         // System.out.println(result);
         
     
