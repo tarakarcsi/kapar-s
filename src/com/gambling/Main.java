@@ -30,7 +30,7 @@ public class Main {
         DataEvaluator dataEvaluator = new DataEvaluator();
         String[][] a = dataEvaluator.ReadingFromFile();
         System.out.println(Arrays.deepToString(a));
-        // System.out.println(result);
+        System.out.println(dataEvaluator.onlyBrands(a));
         
     
 

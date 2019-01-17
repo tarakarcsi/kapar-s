@@ -1,6 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
-
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.*;
@@ -35,11 +35,14 @@ public class DataEvaluator {
         return raceData; 
         
     }
-    // public String[] onlyBrands(){
-    //     int max = 
-    //     for (int i = 0; i < max; i++) {
-            
-    //     }
-    // }
+    public ArrayList<String> onlyBrands(String[][] data){
+        ArrayList<String> brandList = new ArrayList<String>();
+        for(int i = 0; i < data.length; i++) {
+            for(int j = 0; j < 8; j++) {
+                brandList.add(data[i][1]);
+            }
+        }
+        return brandList;
+    }
 
 }
