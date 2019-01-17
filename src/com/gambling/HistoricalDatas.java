@@ -11,7 +11,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 public class HistoricalDatas extends Main{
 
@@ -71,27 +73,20 @@ public class HistoricalDatas extends Main{
             
         }
         winner.add(winnerteam);
-        // System.out.println(winnerteam);
 
-        
-        
-        
-        // FileWriter fileWriter = new FileWriter("Data.csv");
-        // //Add a new line separator after the header
-        // fileWriter.append(NEW_LINE_SEPARATOR);
-        // //Write a new student object list to the CSV file
-        // for (int i = 0; i < 10 / 10; i++) {
-            // 	fileWriter.append(String.valueOf(CarsAndDrivers.getName()));
-			// 	fileWriter.append(COMMA_DELIMITER);
-			// 	fileWriter.append(String.valueOf(student.getAge()));
-			// 	fileWriter.append(NEW_LINE_SEPARATOR);
-			// }
-            
-			
-			
-			// System.out.println("CSV file was created successfully !!!");
-			
-            
             return winnerteam;
         }
+
+        public void generateData(){
+            try{
+                PrintWriter pw = new PrintWriter(new File("Data.csv"));
+                StringBuilder sb = new StringBuilder();
+                sb.append(winnerteam());
+                pw.write(sb.toString());
+                pw.close();
+            }catch(Exception e) {
+                System.out.println("file not found exception");
+            }
+        }
+
     }

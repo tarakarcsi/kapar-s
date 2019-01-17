@@ -15,7 +15,7 @@ public class Main {
         HistoricalDatas racingData = new HistoricalDatas();
         String result = racingData.winnerteam();
         System.out.println(result);
-        // System.out.println(result.get(1).getBrand());
+        racingData.generateData();
         
     }
 
