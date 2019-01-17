@@ -16,91 +16,96 @@ public class CarsAndDrivers extends Main {
     private double luckCar;
     private double skill;
     private double luckDriver;
+    private double horsePower2;
+    private double zeroToHundred2;
+    private double weight2;
 
     public CarsAndDrivers(String name, double skill, double luckDriver, double horsePower, double zeroToHundred, double weight,String brand, double luckCar) {
         
         Random r = new Random();
         String[] brandList = {"Lekszusz", "Béjemvé", "Dodzs", "Kilya", "Pözsó", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Rojsz Rojsz"};
 
+        
+        switch (brand) {
+            case "Lekszusz":
+            horsePower2 = 4;
+            weight2 = 4;
+            zeroToHundred2 = 3;
+            break;
+            
+            case "Béjemvé":
+            horsePower2 = 8;
+            weight2 = 2;
+            zeroToHundred2 = 8;
+            break;
+            
+            case "Dodzs":
+            horsePower2 = 7;
+            weight2 = 8;
+            zeroToHundred2 = 6;
+            break;
+            
+            case "Kilya":
+            horsePower2 = 10;
+            weight2 = 1;
+            zeroToHundred2 = 10;
+            break;
+            
+            case "Pözsó":
+            horsePower2 = 5;
+            weight2 = 5;
+            zeroToHundred2 = 2;
+            break;
+            
+            case "Dzsipp":
+            horsePower2 = 6;
+            weight2 = 10;
+            zeroToHundred2 = 7;
+            break;
+            
+            case "Kőnigszeg":
+            horsePower2 = 1;
+            weight2 = 6;
+            zeroToHundred2 = 1;
+            break;
+            
+            case "Micubicsi":
+            horsePower2 = 9;
+            weight2 = 3;
+            zeroToHundred2 = 9;
+            break;
+            
+            case "Krájzler":
+            horsePower2 = 3;
+            weight2 = 9;
+            zeroToHundred2 = 4;
+            break;
+            
+            case "Rojsz Rojsz":
+            horsePower2 = 2;
+            weight2 = 7;
+            zeroToHundred2 = 5;
+            break;
+            
+        }
         this.brand = brandList[r.nextInt(brandList.length)];
         this.skill = (10 - 0) * r.nextDouble();
         this.luckDriver = (10 - 0) * r.nextDouble();
         this.luckCar = (10 - 0) * r.nextDouble();
         this.name = name;
-        this.skill = skill;
-
-        switch (brand) {
-            case "Lekszusz":
-                this.horsePower = 4;
-                this.weight = 4;
-                this.zeroToHundred = 3;
-                break;
-
-            case "Béjemvé":
-                this.horsePower = 8;
-                this.weight = 2;
-                this.zeroToHundred = 8;
-                break;
-
-            case "Dodzs":
-                this.horsePower = 7;
-                this.weight = 8;
-                this.zeroToHundred = 6;
-                break;
-
-            case "Kilya":
-                this.horsePower = 10;
-                this.weight = 1;
-                this.zeroToHundred = 10;
-                break;
-
-            case "Pözsó":
-                this.horsePower = 5;
-                this.weight = 5;
-                this.zeroToHundred = 2;
-                break;
-
-            case "Dzsipp":
-                this.horsePower = 6;
-                this.weight = 10;
-                this.zeroToHundred = 7;
-                break;
-
-            case "Kőnigszeg":
-                this.horsePower = 1;
-                this.weight = 6;
-                this.zeroToHundred = 1;
-                break;
-
-            case "Micubicsi":
-                this.horsePower = 9;
-                this.weight = 3;
-                this.zeroToHundred = 9;
-                break;
-
-            case "Krájzler":
-                this.horsePower = 3;
-                this.weight = 9;
-                this.zeroToHundred = 4;
-                break;
-
-            case "Rojsz Rojsz":
-                this.horsePower = 2;
-                this.weight = 7;
-                this.zeroToHundred = 5;
-                break;
-
-        }
+        this.horsePower = horsePower2;
+        this.weight = weight2;
+        this.zeroToHundred = zeroToHundred2;
     }
     
     public String getBrand() {
         return brand;
     }
-
+    
     public double getHorsePower() {
         return horsePower;
     }
-
+    
     public double getZeroToHundred() {
         return zeroToHundred;
     }

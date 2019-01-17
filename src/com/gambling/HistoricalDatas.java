@@ -62,13 +62,13 @@ public class HistoricalDatas extends Main{
                 
                 maxscore = score;
                 winnerteam = racers.get(i).getName() +
-                "\n" + racers.get(i).getBrand() +
-                "\n" + racers.get(i).getluckCar() +
-                "\n" + racers.get(i).getluckDriver() +
-                "\n" + racers.get(i).getSkill() +
-                "\n" + racers.get(i).getHorsePower() +
-                "\n" + racers.get(i).getZeroToHundred() +
-                "\n" + racers.get(i).getWeight();
+                ", " + racers.get(i).getBrand() +
+                ", " + racers.get(i).getluckCar() +
+                ", " + racers.get(i).getluckDriver() +
+                ", " + racers.get(i).getSkill() +
+                ", " + racers.get(i).getHorsePower() +
+                ", " + racers.get(i).getZeroToHundred() +
+                ", " + racers.get(i).getWeight() + "\n";
                 
             }
             
