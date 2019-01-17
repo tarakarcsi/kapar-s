@@ -33,41 +33,34 @@ public class HistoricalDatas extends Main{
         CarsAndDrivers racer10 = new CarsAndDrivers("Kolin Mekrí", -1, -1, -1, -1, -1, "default", -1);
         
         List <CarsAndDrivers> racers = new ArrayList<>();
+        List <CarsAndDrivers> winner = new ArrayList<>();
 
-        racers.add(racer1);
-        racers.add(racer2);
-        racers.add(racer3);
-        racers.add(racer4);
-        racers.add(racer5);
-        racers.add(racer6);
-        racers.add(racer7);
-        racers.add(racer8);
-        racers.add(racer9);
-        racers.add(racer10);
-
+        
         double maxscore = 10000;
         double score;
         String winnerteam = null;
-
+        
         for (int i = 0; i < racers.size(); i++) {
             score = racers.get(i).getSkill() + racers.get(i).getHorsePower() + racers.get(i).getluckCar() + 
             racers.get(i).getluckDriver() + racers.get(i).getZeroToHundred() + racers.get(i).getWeight();
-
+            
             if(score < maxscore){
+                
                 maxscore = score;
                 winnerteam = racers.get(i).getName() +
                 "\n" + racers.get(i).getBrand() +
-                 "\n" + racers.get(i).getluckCar() +
-                  "\n" + racers.get(i).getluckDriver() +
-                   "\n" + racers.get(i).getSkill() +
-                    "\n" + racers.get(i).getHorsePower() +
-                     "\n" + racers.get(i).getZeroToHundred() +
-                      "\n" + racers.get(i).getWeight();
+                "\n" + racers.get(i).getluckCar() +
+                "\n" + racers.get(i).getluckDriver() +
+                "\n" + racers.get(i).getSkill() +
+                "\n" + racers.get(i).getHorsePower() +
+                "\n" + racers.get(i).getZeroToHundred() +
+                "\n" + racers.get(i).getWeight();
+                winner.add(racers.get(i));
             }
 
         }
 
-        System.out.println(winnerteam);
+        System.out.println(winner);
         
         
         
