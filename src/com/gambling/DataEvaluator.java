@@ -43,11 +43,14 @@ public class DataEvaluator {
         }
         return brandList;
     }
-    // public void countOfBrands(String[] brandsList){
-    //     for (int i = 0; i < brandsList.length; i++) {
-    //         System.out.println("Freq of" + i + ":"  + Collections.frequency(brandsList, i));
+    public String countOfBrands(ArrayList<String> brandsList){
+        String counts = null;
+        for (int i = 0; i < brandsList.size(); i++) {
             
-    //     }
-    // }
+            counts = "Freq of" + i + ":"  + Collections.frequency(brandsList, i);
+            
+        }
+        return counts;
+    }
 
 }

@@ -29,9 +29,9 @@ public class Main {
         historicalDatas.generateHistoricalDatas(1000);
         DataEvaluator dataEvaluator = new DataEvaluator();
         String[][] a = dataEvaluator.ReadingFromFile();
-        System.out.println(Arrays.deepToString(a));
-        System.out.println(dataEvaluator.onlyBrands(a));
-        
+        // System.out.println(Arrays.deepToString(a));
+        // System.out.println(dataEvaluator.onlyBrands(a));
+        System.out.println(dataEvaluator.countOfBrands(a));
     
 
     
