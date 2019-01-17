@@ -6,6 +6,9 @@
 
 import java.util.Arrays;
 import java.util.List;
+
+import javax.xml.crypto.Data;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -24,6 +27,10 @@ public class Main {
         CarsAndDrivers carAndDriver = new CarsAndDrivers("default", -1, -1, -1, -1,-1,"default", -1);
         HistoricalDatas historicalDatas = new HistoricalDatas();
         historicalDatas.generateHistoricalDatas(1000);
+        DataEvaluator dataEvaluator = new DataEvaluator();
+        for (int i = 0; i < 100; i++) {
+            
+        }
 
         // System.out.println(result);
         
