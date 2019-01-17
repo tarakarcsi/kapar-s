@@ -31,9 +31,20 @@ public class HistoricalDatas extends Main{
         CarsAndDrivers racer2 = new CarsAndDrivers("Lújisz Hemilton", -1, -1, -1, -1, -1, "default", -1);
         CarsAndDrivers racer5 = new CarsAndDrivers("Dzsenzon Bátön", -1, -1, -1, -1, -1, "default", -1);
         CarsAndDrivers racer10 = new CarsAndDrivers("Kolin Mekrí", -1, -1, -1, -1, -1, "default", -1);
+
         
         List <CarsAndDrivers> racers = new ArrayList<>();
-        List <CarsAndDrivers> winner = new ArrayList<>();
+        List <String> winner = new ArrayList<>();
+        racers.add(racer1);
+        racers.add(racer2);
+        racers.add(racer3);
+        racers.add(racer4);
+        racers.add(racer5);
+        racers.add(racer6);
+        racers.add(racer7);
+        racers.add(racer8);
+        racers.add(racer9);
+        racers.add(racer10);
 
         
         double maxscore = 10000;
@@ -55,12 +66,13 @@ public class HistoricalDatas extends Main{
                 "\n" + racers.get(i).getHorsePower() +
                 "\n" + racers.get(i).getZeroToHundred() +
                 "\n" + racers.get(i).getWeight();
-                winner.add(racers.get(i));
+                
             }
-
+            
         }
+        winner.add(winnerteam);
+        System.out.println(winnerteam);
 
-        System.out.println(winner);
         
         
         
