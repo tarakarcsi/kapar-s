@@ -15,15 +15,15 @@ public class Main {
         String result = null;
         for (int i = 0; i < round; i++) {
             result = racingData.winnerteam();
-            // racingData.generateData();
+            racingData.generateData();
             
         }
         return result;
     }
     public static void main(String[] args) {
         CarsAndDrivers carAndDriver = new CarsAndDrivers("default", -1, -1, -1, -1,-1,"default", -1);
-
-
+        HistoricalDatas historicalDatas = new HistoricalDatas();
+        historicalDatas.generateHistoricalDatas(1000);
 
         // System.out.println(result);
         

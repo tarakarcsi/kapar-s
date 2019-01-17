@@ -77,10 +77,15 @@ public class HistoricalDatas extends Main{
         public void generateData(){
             try{
                 PrintWriter pw = new PrintWriter(new FileWriter(("Data.csv"), true));
+                PrintWriter pw2 = new PrintWriter(new FileWriter("SingleRace.csv"));
                 StringBuilder sb = new StringBuilder();
+                StringBuilder sb2 = new StringBuilder();
                 sb.append(winnerteam());
+                sb2.append(winnerteam());
                 pw.append(sb.toString());
+                pw2.append(sb.toString());
                 pw.close();
+                pw2.close();
             }catch(Exception e) {
                 System.out.println("file not found exception");
             }
