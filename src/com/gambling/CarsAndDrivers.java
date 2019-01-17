@@ -18,15 +18,17 @@ public class CarsAndDrivers extends Main {
     private double luckDriver;
 
     public CarsAndDrivers(String name, double skill, double luckDriver, double horsePower, double zeroToHundred, double weight,String brand, double luckCar) {
-        // String[] nameList = {"Májkül Sumaher", "Lújisz Hemilton", "Szebásztián Fettel", "Kimi Rájkőnen", "Dzsenzon Bátön", 
-        //     "Fernándó Álonzó", "Rúbensz Bárikelló", "Szebásztián Lőb", "Máksz Fersztáppen", "Kolin Mekrí"};
+        
         Random r = new Random();
-        // name = nameList[r.nextInt(nameList.length)];
-        skill = (10 - 0) * r.nextDouble();
-        luckDriver = (10 - 0) * r.nextDouble();
         String[] brandList = {"Lekszusz", "Béjemvé", "Dodzs", "Kilya", "Pözsó", "Dzsipp", "Kőnigszeg", "Micubicsi", "Krájzler", "Rojsz Rojsz"};
-        brand = brandList[r.nextInt(brandList.length)];
-        // this.position = ThreadLocalRandom.current().nextInt(1, 10 + 1);
+
+        this.brand = brandList[r.nextInt(brandList.length)];
+        this.skill = (10 - 0) * r.nextDouble();
+        this.luckDriver = (10 - 0) * r.nextDouble();
+        this.luckCar = (10 - 0) * r.nextDouble();
+        this.name = name;
+        this.skill = skill;
+
         switch (brand) {
             case "Lekszusz":
                 this.horsePower = 4;
@@ -89,12 +91,6 @@ public class CarsAndDrivers extends Main {
                 break;
 
         }
-        
-        this.luckCar = (10 - 0) * r.nextDouble();
-        this.brand = brand;
-        this.name = name;
-        this.skill = skill;
-        this.luckDriver = luckDriver;
     }
     
     public String getBrand() {
@@ -131,13 +127,15 @@ public class CarsAndDrivers extends Main {
 
     @Override
     public String toString() {
-        double newVariable1 = Math.abs(skill - 10);
-        double newVariable2 = Math.abs(luckDriver - 10);
-        double newVariable3 = Math.abs(luckCar - 10);
+
+        double skillFlipped = Math.abs(skill - 10);
+        double luckDriverFlipped = Math.abs(luckDriver - 10);
+        double luckCarFlipped = Math.abs(luckCar - 10);
+
         return "\n" + "Driver's name: " + name + "\n" + "The car's name: " + brand + "\n" + 
         "\n" + "The car's horsepower: " + horsePower + "\n" + 
         "Zero to hundred speed: " + zeroToHundred + "\n" + "The car's weight " + weight + "\n" + 
-        "The driver's skill: " + newVariable1 + " / 10" + "\n" + "Driver's luck: " + newVariable2 + " / 10" + "\n" + 
-        "Car's luck: " + newVariable3 + " / 10" + "\n";
+        "The driver's skill: " + skillFlipped + " / 10" + "\n" + "Driver's luck: " + luckDriverFlipped + " / 10" + "\n" + 
+        "Car's luck: " + luckCarFlipped + " / 10" + "\n";
     }
 }
