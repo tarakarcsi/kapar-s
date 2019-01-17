@@ -19,7 +19,7 @@ public class HistoricalDatas extends Main{
 	private static final String NEW_LINE_SEPARATOR = "\n";
 
 
-    public List<CarsAndDrivers> createRacer() {
+    public String winnerteam() {
         
         CarsAndDrivers racer4 = new CarsAndDrivers("Kimi Rájkőnen", -1, -1, -1, -1, -1, "default", -1);
         CarsAndDrivers racer1 = new CarsAndDrivers("Májkül Sumaher", -1, -1, -1, -1, -1, "default", -1);
@@ -71,7 +71,7 @@ public class HistoricalDatas extends Main{
             
         }
         winner.add(winnerteam);
-        System.out.println(winnerteam);
+        // System.out.println(winnerteam);
 
         
         
@@ -92,6 +92,6 @@ public class HistoricalDatas extends Main{
 			// System.out.println("CSV file was created successfully !!!");
 			
             
-            return racers;
+            return winnerteam;
         }
     }
