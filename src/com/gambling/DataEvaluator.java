@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.*;
+import java.util.*;
 
 public class DataEvaluator {
     
@@ -38,11 +39,15 @@ public class DataEvaluator {
     public ArrayList<String> onlyBrands(String[][] data){
         ArrayList<String> brandList = new ArrayList<String>();
         for(int i = 0; i < data.length; i++) {
-            for(int j = 0; j < 8; j++) {
-                brandList.add(data[i][1]);
-            }
+            brandList.add(data[i][1]);
         }
         return brandList;
     }
+    // public void countOfBrands(String[] brandsList){
+    //     for (int i = 0; i < brandsList.length; i++) {
+    //         System.out.println("Freq of" + i + ":"  + Collections.frequency(brandsList, i));
+            
+    //     }
+    // }
 
 }
