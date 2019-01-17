@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.PrintWriter;
 
 public class HistoricalDatas extends Main{
@@ -79,10 +80,10 @@ public class HistoricalDatas extends Main{
 
         public void generateData(){
             try{
-                PrintWriter pw = new PrintWriter(new File("Data.csv"));
+                PrintWriter pw = new PrintWriter(new FileWriter(("Data.csv"), true));
                 StringBuilder sb = new StringBuilder();
                 sb.append(winnerteam());
-                pw.write(sb.toString());
+                pw.append(sb.toString());
                 pw.close();
             }catch(Exception e) {
                 System.out.println("file not found exception");
