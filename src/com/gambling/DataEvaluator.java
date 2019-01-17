@@ -35,4 +35,11 @@ public class DataEvaluator {
         return raceData; 
         
     }
+    // public String[] onlyBrands(){
+    //     int max = 
+    //     for (int i = 0; i < max; i++) {
+            
+    //     }
+    // }
+
 }
