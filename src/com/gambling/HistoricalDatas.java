@@ -18,26 +18,23 @@ import java.io.PrintWriter;
 
 public class HistoricalDatas extends Main{
 
-    private static final String COMMA_DELIMITER = ",";
-	private static final String NEW_LINE_SEPARATOR = "\n";
-
-
     public String winnerteam() {
         
-        CarsAndDrivers racer4 = new CarsAndDrivers("Kimi Rájkőnen", -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer1 = new CarsAndDrivers("Májkül Sumaher", -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer6 = new CarsAndDrivers("Fernándó Álonzó", -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer7 = new CarsAndDrivers("Rúbensz Bárikelló", -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer3 = new CarsAndDrivers("Szebásztián Fettel", -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer8 = new CarsAndDrivers("Máksz Fersztáppen", -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer9 = new CarsAndDrivers("Szebásztián Lőb", -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer2 = new CarsAndDrivers("Lújisz Hemilton", -1, -1, -1, -1, -1, "default", -1);
-        CarsAndDrivers racer5 = new CarsAndDrivers("Dzsenzon Bátön", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer1 = new CarsAndDrivers("Kimi Rájkőnen", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer2 = new CarsAndDrivers("Májkül Sumaher", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer3 = new CarsAndDrivers("Fernándó Álonzó", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer4 = new CarsAndDrivers("Rúbensz Bárikelló", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer5 = new CarsAndDrivers("Szebásztián Fettel", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer6 = new CarsAndDrivers("Máksz Fersztáppen", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer7 = new CarsAndDrivers("Szebásztián Lőb", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer8 = new CarsAndDrivers("Lújisz Hemilton", -1, -1, -1, -1, -1, "default", -1);
+        CarsAndDrivers racer9 = new CarsAndDrivers("Dzsenzon Bátön", -1, -1, -1, -1, -1, "default", -1);
         CarsAndDrivers racer10 = new CarsAndDrivers("Kolin Mekrí", -1, -1, -1, -1, -1, "default", -1);
 
         
         List <CarsAndDrivers> racers = new ArrayList<>();
         List <String> winner = new ArrayList<>();
+
         racers.add(racer1);
         racers.add(racer2);
         racers.add(racer3);
@@ -49,7 +46,6 @@ public class HistoricalDatas extends Main{
         racers.add(racer9);
         racers.add(racer10);
 
-        
         double maxscore = 10000;
         double score;
         String winnerteam = null;
@@ -73,7 +69,7 @@ public class HistoricalDatas extends Main{
             }
             
         }
-        winner.add(winnerteam);
+            winner.add(winnerteam);
 
             return winnerteam;
         }
