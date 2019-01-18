@@ -32,7 +32,7 @@ public class Main {
             // Thread.sleep(2000);
         System.out.println(" Enter the amount of rounds you wish to generate: \n");
         // } catch (InterruptedException a) {
-            // System.out.println("error message");
+        //     System.out.println("error message");
         // }
         Scanner in = new Scanner(System.in);
         int i = in.nextInt();

@@ -195,7 +195,7 @@ public class DataEvaluator {
         countMicubicsi >= countLekszusz &&
         countMicubicsi >= countPözsó &&
         countMicubicsi >= countRojszRojsz) {
-            CarsAndDrivers carsAndDrivers = new CarsAndDrivers("Dzsenzon Mekrí", 1, 1, 1, 1, 1, 1);
+            CarsAndDrivers carsAndDrivers = new CarsAndDrivers("Dzsenzon Bátön", 1, 1, 1, 1, 1, 1);
             winner = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\" Most races are won by the brand: " + " Micubicsi "
             + carsAndDrivers.getName();
         } if (countKrájzler >= countBéjemvé &&
