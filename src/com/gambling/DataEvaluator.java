@@ -14,7 +14,7 @@ public class DataEvaluator {
         try{
             sc2 = new Scanner(dataFile);
             } catch(FileNotFoundException e) {
-                System.out.println("Vérmalac" + e.getMessage());
+                System.out.println("error message" + e.getMessage());
             }
         int z = 0;
         while(sc2.hasNextLine()) {
@@ -26,7 +26,7 @@ public class DataEvaluator {
         try {
             scr2 = new Scanner(dataFile);
         } catch(FileNotFoundException e) {
-            System.out.println("Vérmalac " + e.getMessage());
+            System.out.println("error message" + e.getMessage());
         }
         String[][] raceData = new String[z][8];
         for(int y=0;y<z;y++){
@@ -38,19 +38,196 @@ public class DataEvaluator {
     }
     public ArrayList<String> onlyBrands(String[][] data){
         ArrayList<String> brandList = new ArrayList<String>();
+        String winner = "";
         for(int i = 0; i < data.length; i++) {
             brandList.add(data[i][1]);
         }
+        int countLekszusz = 0;
+        for (int i = 0; i < brandList.size(); i++) {
+            if (brandList.get(i).equals("Lekszusz")) {
+                countLekszusz += 1;
+            }
+        }
+        int countBéjemvé = 0;
+        for (int i = 0; i < brandList.size(); i++) {
+            if (brandList.get(i).equals("Béjemvé")) {
+                countBéjemvé += 1;
+            }
+        }
+        int countDodzs = 0;
+        for (int i = 0; i < brandList.size(); i++) {
+            if (brandList.get(i).equals("Dodzs")) {
+                countDodzs += 1;
+            }
+        }
+        int countKilya = 0;
+        for (int i = 0; i < brandList.size(); i++) {
+            if (brandList.get(i).equals("Kilya")) {
+                countKilya += 1;
+            }
+        }
+        int countPözsó = 0;
+        for (int i = 0; i < brandList.size(); i++) {
+            if (brandList.get(i).equals("Pözsó")) {
+                countPözsó += 1;
+            }
+        }
+        int countDzsipp = 0;
+        for (int i = 0; i < brandList.size(); i++) {
+            if (brandList.get(i).equals("Dzsipp")) {
+                countDzsipp += 1;
+            }
+        }
+        int countKőnigszeg = 0;
+        for (int i = 0; i < brandList.size(); i++) {
+            if (brandList.get(i).equals("Kőnigszeg")) {
+                countKőnigszeg += 1;
+            }
+        }
+        int countMicubicsi = 0;
+        for (int i = 0; i < brandList.size(); i++) {
+            if (brandList.get(i).equals("Micubicsi")) {
+                countMicubicsi += 1;
+            }
+        }
+        int countKrájzler = 0;
+        for (int i = 0; i < brandList.size(); i++) {
+            if (brandList.get(i).equals("Krájzler")) {
+                countKrájzler += 1;
+            }
+        }
+        int countRojszRojsz = 0;
+        for (int i = 0; i < brandList.size(); i++) {
+            if (brandList.get(i).equals("Rojsz Rojsz")) {
+                countRojszRojsz += 1;
+            }
+        }
+        if (countLekszusz >= countBéjemvé ||
+        countLekszusz >= countDodzs || 
+        countLekszusz >= countDzsipp || 
+        countLekszusz >= countKilya || 
+        countLekszusz >= countKrájzler ||
+        countLekszusz >= countKőnigszeg || 
+        countLekszusz >= countMicubicsi ||
+        countLekszusz >= countPözsó ||
+        countLekszusz >= countRojszRojsz) {
+            CarsAndDrivers carsAndDrivers = new CarsAndDrivers("name", 1, 1, 1, 1, 1, 1);
+            winner = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\" Most races are won by the brand: " + "Lekszusz "
+            + carsAndDrivers.getName();
+        } if (countBéjemvé >= countLekszusz ||
+        countBéjemvé >= countDodzs || 
+        countBéjemvé >= countDzsipp || 
+        countBéjemvé >= countKilya || 
+        countBéjemvé >= countKrájzler ||
+        countBéjemvé >= countKőnigszeg || 
+        countBéjemvé >= countMicubicsi ||
+        countBéjemvé >= countPözsó ||
+        countBéjemvé >= countRojszRojsz) {
+            CarsAndDrivers carsAndDrivers = new CarsAndDrivers("test", 1, 1, 1, 1, 1, 1);
+            winner = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\" Most races are won by the brand: " + "Béjemvé "
+            + carsAndDrivers.getName();
+        } if (countDodzs >= countLekszusz ||
+        countDodzs >= countDodzs || 
+        countDodzs >= countDzsipp || 
+        countDodzs >= countKilya || 
+        countDodzs >= countKrájzler ||
+        countDodzs >= countKőnigszeg || 
+        countDodzs >= countMicubicsi ||
+        countDodzs >= countPözsó ||
+        countDodzs >= countRojszRojsz) {
+            CarsAndDrivers carsAndDrivers = new CarsAndDrivers("test", 1, 1, 1, 1, 1, 1);
+            winner = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\" Most races are won by the brand: " + "Dodzs "
+            + carsAndDrivers.getName();
+        } if (countKilya >= countBéjemvé ||
+        countKilya >= countDodzs || 
+        countKilya >= countDzsipp || 
+        countKilya >= countLekszusz || 
+        countKilya >= countKrájzler ||
+        countKilya >= countKőnigszeg || 
+        countKilya >= countMicubicsi ||
+        countKilya >= countPözsó ||
+        countKilya >= countRojszRojsz) {
+            CarsAndDrivers carsAndDrivers = new CarsAndDrivers("test", 1, 1, 1, 1, 1, 1);
+            winner = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\" Most races are won by the brand: " + "Kilya "
+            + carsAndDrivers.getName();
+        } if (countPözsó >= countBéjemvé ||
+        countPözsó >= countDodzs || 
+        countPözsó >= countDzsipp || 
+        countPözsó >= countKilya || 
+        countPözsó >= countKrájzler ||
+        countPözsó >= countKőnigszeg || 
+        countPözsó >= countMicubicsi ||
+        countPözsó >= countLekszusz ||
+        countPözsó >= countRojszRojsz) {
+            CarsAndDrivers carsAndDrivers = new CarsAndDrivers("test", 1, 1, 1, 1, 1, 1);
+            winner = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\" Most races are won by the brand: " + "Pözsó "
+            + carsAndDrivers.getName();
+        } if (countDzsipp >= countBéjemvé ||
+        countDzsipp >= countDodzs || 
+        countDzsipp >= countLekszusz || 
+        countDzsipp >= countKilya || 
+        countDzsipp >= countKrájzler ||
+        countDzsipp >= countKőnigszeg || 
+        countDzsipp >= countMicubicsi ||
+        countDzsipp >= countPözsó ||
+        countDzsipp >= countRojszRojsz) {
+            CarsAndDrivers carsAndDrivers = new CarsAndDrivers("test", 1, 1, 1, 1, 1, 1);
+            winner = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\" Most races are won by the brand: " + "Dzsipp "
+            + carsAndDrivers.getName();
+        } if (countKőnigszeg >= countBéjemvé ||
+        countKőnigszeg >= countDodzs || 
+        countKőnigszeg >= countDzsipp || 
+        countKőnigszeg >= countKilya || 
+        countKőnigszeg >= countKrájzler ||
+        countKőnigszeg >= countLekszusz || 
+        countKőnigszeg >= countMicubicsi ||
+        countKőnigszeg >= countPözsó ||
+        countKőnigszeg >= countRojszRojsz) {
+            CarsAndDrivers carsAndDrivers = new CarsAndDrivers("test", 1, 1, 1, 1, 1, 1);
+            winner = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\" Most races are won by the brand: " + "Kőnigszeg "
+            + carsAndDrivers.getName();
+        } if (countMicubicsi >= countBéjemvé ||
+        countMicubicsi >= countDodzs || 
+        countMicubicsi >= countDzsipp || 
+        countMicubicsi >= countKilya || 
+        countMicubicsi >= countKrájzler ||
+        countMicubicsi >= countKőnigszeg || 
+        countMicubicsi >= countLekszusz ||
+        countMicubicsi >= countPözsó ||
+        countMicubicsi >= countRojszRojsz) {
+            CarsAndDrivers carsAndDrivers = new CarsAndDrivers("test", 1, 1, 1, 1, 1, 1);
+            winner = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\" Most races are won by the brand: " + "Micubicsi "
+            + carsAndDrivers.getName();
+        } if (countKrájzler >= countBéjemvé ||
+        countKrájzler >= countDodzs || 
+        countKrájzler >= countDzsipp || 
+        countKrájzler >= countKilya || 
+        countKrájzler >= countLekszusz ||
+        countKrájzler >= countKőnigszeg || 
+        countKrájzler >= countMicubicsi ||
+        countKrájzler >= countPözsó ||
+        countKrájzler >= countRojszRojsz) {
+            CarsAndDrivers carsAndDrivers = new CarsAndDrivers("test", 1, 1, 1, 1, 1, 1);
+            winner = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\" Most races are won by the brand: " + "Krájzler "
+            + carsAndDrivers.getName();
+        } if (countRojszRojsz >= countBéjemvé ||
+        countRojszRojsz >= countDodzs || 
+        countRojszRojsz >= countDzsipp || 
+        countRojszRojsz >= countKilya || 
+        countRojszRojsz >= countKrájzler ||
+        countRojszRojsz >= countKőnigszeg || 
+        countRojszRojsz >= countMicubicsi ||
+        countRojszRojsz >= countPözsó ||
+        countRojszRojsz >= countLekszusz) {
+            CarsAndDrivers carsAndDrivers = new CarsAndDrivers("test", 1, 1, 1, 1, 1, 1);
+            winner = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\" Most races are won by the brand: " + "Rojsz Rojsz " 
+            + carsAndDrivers.getName();
+        }
+        brandList.add(winner);
         return brandList;
     }
-    public String countOfBrands(ArrayList<String> brandsList){
-        String counts = null;
-        for (int i = 0; i < brandsList.size(); i++) {
-            
-            counts = "Freq of" + i + ":"  + Collections.frequency(brandsList, i);
-            
-        }
-        return counts;
-    }
+    // public String countOfBrands(ArrayList<String> brandsList){
+        
+    // }
 
 }

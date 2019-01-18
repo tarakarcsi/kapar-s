@@ -30,21 +30,21 @@ public class CarsAndDrivers extends Main {
         
         switch (brand) {
             case "Lekszusz":
-            horsePower2 = 4;
-            weight2 = 4;
-            zeroToHundred2 = 3;
+            horsePower2 = 10;
+            weight2 = 10;
+            zeroToHundred2 = 10;
             break;
             
             case "Béjemvé":
-            horsePower2 = 8;
-            weight2 = 2;
-            zeroToHundred2 = 8;
+            horsePower2 = 6;
+            weight2 = 6;
+            zeroToHundred2 = 4;
             break;
             
             case "Dodzs":
-            horsePower2 = 7;
-            weight2 = 8;
-            zeroToHundred2 = 6;
+            horsePower2 = 3;
+            weight2 = 2;
+            zeroToHundred2 = 3;
             break;
             
             case "Kilya":
@@ -54,9 +54,9 @@ public class CarsAndDrivers extends Main {
             break;
             
             case "Pözsó":
-            horsePower2 = 5;
-            weight2 = 5;
-            zeroToHundred2 = 2;
+            horsePower2 = 6;
+            weight2 = 7;
+            zeroToHundred2 = 6;
             break;
             
             case "Dzsipp":
@@ -67,7 +67,7 @@ public class CarsAndDrivers extends Main {
             
             case "Kőnigszeg":
             horsePower2 = 1;
-            weight2 = 6;
+            weight2 = 2;
             zeroToHundred2 = 1;
             break;
             
@@ -84,9 +84,9 @@ public class CarsAndDrivers extends Main {
             break;
             
             case "Rojsz Rojsz":
-            horsePower2 = 2;
-            weight2 = 7;
-            zeroToHundred2 = 5;
+            horsePower2 = 1;
+            weight2 = 3;
+            zeroToHundred2 = 2;
             break;
             
         }
